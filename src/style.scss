@@ -1,0 +1,141 @@
+$--grean-color: #03c988;
+$--blue-color: #1c82ad;
+$--light-blue-color: #e4f1ff;
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.active {
+  display: block;
+}
+
+.rooms {
+  .room-active {
+    align-items: flex-start;
+    min-width: 100%;
+    background-color: $--light-blue-color;
+
+    .room-number {
+      gap: 20px;
+    }
+    .person {
+      .name-person {
+        display: none;
+      }
+
+      .appeal-person {
+        display: block !important;
+        margin: 16px 0;
+      }
+
+      .birthday-person {
+        display: block !important;
+      }
+
+      .vital-signs {
+        display: block !important;
+        margin-top: 20px;
+      }
+    }
+
+    .status {
+      display: none;
+    }
+
+    .name-doc {
+      display: none;
+    }
+
+    .assistant-doc {
+      display: none;
+    }
+
+    .open-botton {
+      display: none;
+    }
+  }
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+.rooms {
+  display: flex;
+  justify-content: space-between;
+  .room {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+    padding: 10px;
+    padding-bottom: 50px;
+    border-bottom: 3px solid $--grean-color;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.2);
+
+    p {
+      margin: 0;
+      margin-top: 5px;
+    }
+
+    .room-number {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .person {
+      .appeal-person {
+        display: none;
+      }
+
+      .birthday-person {
+        display: none;
+      }
+
+      .vital-signs {
+        display: none;
+      }
+    }
+
+    .name-doc {
+      color: $--blue-color;
+    }
+
+    .open-botton {
+      position: absolute;
+      padding: 10px 0px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+
+      text-align: center;
+      color: #fff;
+      background-color: #1c82ad;
+      cursor: pointer;
+    }
+  }
+}
+
+.app-area {
+  position: relative;
+  .close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    padding: 10px;
+    background-color: red;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+  }
+}
